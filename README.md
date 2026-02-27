@@ -15,7 +15,8 @@ A modern responsive navigation bar built using **HTML, CSS and JavaScript**.
 - JavaScript (DOM Manipulation)
 
 ## 📸 Preview
-(Add screenshot here later)
+
+![Project Demo](Preview.gif)
 
 ## 🔗 Live Demo
 (Your GitHub Pages link here)
