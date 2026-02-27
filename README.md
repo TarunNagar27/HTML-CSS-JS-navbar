@@ -19,7 +19,7 @@ A modern responsive navigation bar built using **HTML, CSS and JavaScript**.
 ![Project Demo](Preview.gif)
 
 ## 🔗 Live Demo
-(Your GitHub Pages link here)
+https://tarunnagar27.github.io/HTML-CSS-JS-navbar/
 
 ## 👨‍💻 Author
 Tarun Nagar
