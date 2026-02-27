@@ -1,6 +1,10 @@
 # 🚀 Responsive Navbar
 
-A modern responsive navigation bar built using **HTML, CSS and JavaScript**.
+## 🔗 Live Demo
+https://tarunnagar27.github.io/HTML-CSS-JS-navbar/
+
+
+Modern responsive navigation bar with hamburger menu, scroll active links, and smooth animations built using HTML, CSS & JavaScript.
 
 ## ✨ Features
 - Mobile hamburger menu
@@ -18,8 +22,11 @@ A modern responsive navigation bar built using **HTML, CSS and JavaScript**.
 
 ![Project Demo](Preview.gif)
 
-## 🔗 Live Demo
-https://tarunnagar27.github.io/HTML-CSS-JS-navbar/
+## 📚 What I Learned
+- DOM manipulation
+- Responsive layouts
+- Mobile navigation logic
+- Git & GitHub workflow
 
 ## 👨‍💻 Author
 Tarun Nagar
