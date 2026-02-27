@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Setup -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Responsive Navbar</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <div class="nav-logo">
+      <a href="#home">
+        <i class="fas fa-code"></i>
+        <span>WebDev Tarun</span>
+      </a>
+    </div>
+
+    <ul class="nav-menu">
+
+      <li class="nav-item">
+        <a href="#home" class="nav-link active">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#about" class="nav-link">
+          <i class="fas fa-user"></i>
+          <span>About</span>
+        </a>
+      </li>
+
+      <!-- ✅ FIXED -->
+      <li class="nav-item">
+        <a href="#skills" class="nav-link">
+          <i class="fas fa-code"></i>
+          <span>Skills</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#portfolio" class="nav-link">
+          <i class="fas fa-images"></i>
+          <span>Portfolio</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#contact" class="nav-link">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li>
+
+    </ul>
+
+    <div class="hamburger" aria-label="Toggle Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- ================= SECTIONS ================= -->
+
+<section id="home" class="section">
+  <div class="container">
+    <h1>Hi, I'm Tarun 👋</h1>
+    <p>
+      Aspiring Software Developer learning HTML, CSS and JavaScript.
+      Currently building real projects to improve frontend skills.
+    </p>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h1>About Me</h1>
+    <p>
+      I am a beginner web developer passionate about creating responsive
+      and interactive websites.
+    </p>
+  </div>
+</section>
+
+<!-- ✅ FIXED -->
+<section id="skills" class="section">
+  <div class="container">
+    <h1>Skills</h1>
+    <p>
+      HTML5, CSS3, Responsive Design, JavaScript DOM Manipulation,
+      Git & GitHub basics.
+    </p>
+  </div>
+</section>
+
+<section id="portfolio" class="section">
+  <div class="container">
+    <h1>Projects</h1>
+    <p>
+      • Responsive Navbar Project<br>
+      • JavaScript Mini Apps (Coming Soon)<br>
+      • Portfolio Website (In Progress)
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h1>Contact Me</h1>
+    <p>
+      📧 Email: bizzwithtarun27@gmail.com<br>
+      💻 GitHub: github.com/TarunNagar27<br>
+      🔗 LinkedIn:
+    </p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

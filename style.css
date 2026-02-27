@@ -1,0 +1,285 @@
+/* ===================================================
+   RESET & GLOBAL SETTINGS
+=================================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+    --primary-color:#6366f1;
+    --secondary-color:#4f46e5;
+    --text-color:#333;
+    --white:#fff;
+    --light-gray:#f3f4f6;
+    --dark-gray:#1f2937;
+    --transition:all 0.3s ease;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height:1.6;
+    color:var(--text-color);
+}
+
+
+/* ===================================================
+   NAVBAR
+=================================================== */
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:var(--white);
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    transition:var(--transition);
+}
+
+/* Scroll Effect */
+.navbar.scrolled{
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 20px rgba(0,0,0,0.15);
+}
+
+.nav-container{
+    max-width:1200px;
+    height:70px;
+    margin:auto;
+    padding:0 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+/* ===================================================
+   LOGO
+=================================================== */
+.nav-logo a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+    font-size:1.5rem;
+    font-weight:bold;
+    color:var(--primary-color);
+
+    transition:var(--transition);
+}
+
+.nav-logo a:hover{
+    color:var(--secondary-color);
+    transform:scale(1.05);
+}
+
+.nav-logo i{
+    font-size:1.8rem;
+}
+
+
+/* ===================================================
+   NAVIGATION MENU
+=================================================== */
+.nav-menu{
+    display:flex;
+    list-style:none;
+    gap:10px;
+}
+
+.nav-item{
+    position:relative;
+}
+
+.nav-link{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 20px;
+    border-radius:8px;
+
+    text-decoration:none;
+    font-weight:500;
+    color:var(--text-color);
+
+    transition:var(--transition);
+}
+
+/* Hover */
+.nav-link:hover{
+    background:var(--light-gray);
+    color:var(--primary-color);
+    transform:translateY(-2px);
+}
+
+/* Active */
+.nav-link.active{
+    background:var(--primary-color);
+    color:var(--white);
+}
+
+.nav-link.active:hover{
+    background:var(--secondary-color);
+}
+
+/* Underline Animation */
+.nav-link::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:50%;
+    width:0;
+    height:2px;
+    background:var(--primary-color);
+    transform:translateX(-50%);
+    transition:var(--transition);
+}
+
+.nav-link:hover::after{
+    width:80%;
+}
+
+.nav-link.active::after{
+    width:0;
+}
+
+
+/* ===================================================
+   HAMBURGER MENU
+=================================================== */
+.hamburger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+
+.bar{
+    width:28px;
+    height:3px;
+    border-radius:3px;
+    background:var(--text-color);
+    transition:var(--transition);
+}
+
+/* Animation */
+.hamburger.active .bar:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.active .bar:nth-child(3){
+    transform:translateY(-8px) rotate(-45deg);
+}
+
+
+/* ===================================================
+   DEMO SECTIONS
+=================================================== */
+.section{
+    min-height:100vh;
+    padding:100px 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.section:nth-child(even){
+    background:var(--light-gray);
+}
+
+.container{
+    max-width:1200px;
+    text-align:center;
+}
+
+.section h1{
+    font-size:3rem;
+    color:var(--primary-color);
+    margin-bottom:20px;
+}
+
+.section p{
+    font-size:1.2rem;
+}
+
+
+/* ===================================================
+   RESPONSIVE DESIGN
+=================================================== */
+
+/* Tablet */
+@media(max-width:768px){
+
+    .hamburger{
+        display:flex;
+    }
+
+    .nav-menu{
+        position:fixed;
+        top:70px;
+        left:-100%;
+        width:100%;
+
+        flex-direction:column;
+        text-align:center;
+        gap:0;
+        padding:20px 0;
+
+        background:var(--white);
+        box-shadow:0 10px 27px rgba(0,0,0,0.1);
+        transition:0.3s;
+    }
+
+    .nav-menu.active{
+        left:0;
+    }
+
+    .nav-link{
+        width:100%;
+        justify-content:center;
+        padding:15px 20px;
+        border-radius:0;
+    }
+
+    .nav-link:hover{
+        transform:none;
+        padding-left:30px;
+    }
+
+    .nav-link::after{
+        display:none;
+    }
+
+    .section h1{ font-size:2rem; }
+    .section p{ font-size:1rem; }
+}
+
+
+/* Mobile */
+@media(max-width:480px){
+
+    .nav-logo a{ font-size:1.3rem; }
+    .nav-logo i{ font-size:1.5rem; }
+
+    .nav-link span{
+        font-size:0.95rem;
+    }
+
+    .section h1{
+        font-size:1.8rem;
+    }
+}
